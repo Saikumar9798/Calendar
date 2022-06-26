@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Tai+Heritage+Pro:wght@400;700&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Tai Heritage Pro", serif;
+}
+
+:root {
+  --primary: #19181a;
+  --secondary: #282729;
+  --white: white;
+}
+
+#calendar-wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--primary);
+  display: grid;
+  place-items: center;
+}
+
+#calendar {
+  width: 80vw;
+  height: 80vh;
+  background-color: var(--secondary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  padding: 2em;
+}
+
+#year--month {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#days {
+  width: 100%;
+  table-layout: fixed;
+  color: var(--white);
+}
+
+#days > thead > tr > th {
+  background-color: var(--white);
+  color: var(--primary);
+}
+
+#days-body > tr > td {
+  background-color: var(--primary);
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+#year--month > select {
+  max-height: 500px;
+}
+
+#year--month > h1 {
+  color: var(--white);
+}
